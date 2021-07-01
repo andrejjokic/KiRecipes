@@ -17,3 +17,8 @@
 .best-recipes-row {
 	margin: 30px;
 }
+
+.nav-active {
+	background-color: #102628;
+	color: white !important;
+}
