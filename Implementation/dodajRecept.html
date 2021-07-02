@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Page Title -->
-    <title>Add recipe</title>
+    <title>KiRecipes / Dodaj recept</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/x-icon">
@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="assets/css/owl-carousel.min.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/vendor/jquery-1.11.3.min.js"></script>
+    <script src="skripta.js"></script>
 </head>
 <body>
     <!-- Preloader Starts -->
@@ -29,12 +31,12 @@
     <!-- Preloader End -->
 
     <!-- Header Area Starts -->
-	<header class="header-area header-area2">
+	<header class="header-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-2">
                     <div class="logo-area">
-                        <a href="index.html"><img src="assets/images/logo/logo2.png" alt="logo"></a>
+                        <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo"></a>
                     </div>
                 </div>
                 <div class="col-lg-10">
@@ -42,20 +44,22 @@
                         <span></span>
                         <span></span>
                         <span></span>
-                    </div> 
-                    <div class="main-menu main-menu2">
+                    </div>  
+                    <div class="main-menu">
                         <ul>
-                            <li class="active"><a href="index.html">home</a></li>
-                            <li><a href="about.html">about</a></li>
-                            <li><a href="menu.html">menu</a></li>
-                            <li><a href="#">blog</a>
+                            <li><a href="index.html">pocetna</a></li>
+                            <li>
+                                <a href="about.html">recepti</a>
                                 <ul class="sub-menu">
-                                    <li><a href="blog-home.html">Blog Home</a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>
+                                    <li><a href="#">Predjelo</a></li>
+                                    <li><a href="#">Glavno jelo</a></li>
+                                    <li><a href="#">Desert</a></li>
+                                    <li><a href="#">Uzina</a></li>
                                 </ul>
                             </li>
-                            <li><a href="contact-us.html">contact</a></li>
-                            <li><a href="elements.html">Elements</a></li>
+                            <li><a class="nav-active" href="menu.html">dodaj recept</a></li>
+                            <li><a href="#">moj nalog</a></li>
+                            <li><a href="o_nama.html">o nama</a></li>
                         </ul>
                     </div>
                 </div>
@@ -65,14 +69,12 @@
     <!-- Header Area End -->
 
     <!-- Banner Area Starts -->
-    <section class="banner-area banner-area2 blog-page text-center">
+    <section class="banner-area text-center">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1><i>Add recipe</i></h1>
-                    <a href="index.html">home</a>
-                    <span class="mx-2">/</span>
-                    <a href="elements.html">Add recipe</a>
+                    <h1>Dodajte novi recept na<span class="prime-color"></span><br>  
+                    <span class="style-change"><span class="prime-color">Ki</span>Recipes</span></h1>
                 </div>
             </div>
         </div>
@@ -90,34 +92,40 @@
             <div class="section-top-border">
                 <div class="row">
                     <div class="col-lg-8 col-md-8">
-                        <h3 class="mb-30 title_color">Add recipe</h3>
-                        <form action="#">
+                        <h3 class="mb-30 title_color">Dodaj recept</h3>
+                        
+
                             <div class="mt-10">
-                                <input type="text" name="first_name" placeholder="Recipe Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" required class="single-input">
+                                <input type="text" id="ime_recepta" placeholder="Ime recepta" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ime recepta'" required class="single-input">
                             </div>
                             
                             <div class="input-group-icon mt-10">
                                 <div class="icon"><i class="fa fa-cutlery" aria-hidden="true"></i></div>
                                 <div class="form-select" id="default-select">
-                                    <select>
-                                        <option value="Main dish">Main dish</option>
-                                        <option value="Desert">Desert</option>
-                                        <option value="Appetizer">Appetizer</option>
-                                        <option value="Snack">Snack</option>
+                                    <select id="vrsta_jela">
+                                        <option value="Glavno jelo">Glavno jelo</option>
+                                        <option value="Dezert">Dezert</option>
+                                        <option value="Predjelo">Predjelo</option>
+                                        <option value="Užina">Užina</option>
                                     </select>
                                 </div>
+                            </div>
+                            
+                            
+
+                            <div class="mt-10">
+                                <div class="icon"><i class="fas fa-pencil-alt" aria-hidden="true"></i></div>
+                                <textarea class="single-textarea" id="recept" placeholder="Recept" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Recept'" required></textarea>
                             </div>
                             <div class="input-group-icon mt-10" style="width: 150px;">
                                 <div class="icon"><i class="fa  fa-cogs
                                     " aria-hidden="true"></i></div>
                                 <div class="form-select" id="default-select">
-                                    <select>
-                                        <option value="">Difficulty</option>
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="1">5</option>
+                                    <select id="tezina">
+                                        <option value="">Težina</option>
+                                        <option value="Lako">Lako</option>
+                                        <option value="Srednje">Srednje</option>
+                                        <option value="Tesko">Tesko</option>
                                     </select>
                                 </div>
                             </div>
@@ -126,28 +134,23 @@
                             <div class="input-group-icon mt-10" style="width: 150px;">
                                 <div class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
                                 <div class="form-select" id="default-select">
-                                    <select>
-                                        <option value="">Total time</option>
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="1">5</option>
+                                    <select id="vreme">
+                                        <option value="">Vreme</option>
+                                        <option value="0-15min">0-15min</option>
+                                        <option value="15-30min">15-30min</option>
+                                        <option value="30-60min">30-60min</option>
+                                        <option value="1h+">1h+</option>
                                     </select>
                                 </div>
                             </div>
-                            
-                            <div class="mt-10">
-                                <textarea class="single-textarea" placeholder="Instruction" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Instruction'" required></textarea>
-                            </div>
                             <br>
-                            <label for="">Select image</label><br>
-                            <input type="file" title="Search for a file to add 2" class="genric-btn success circle">
+                            <label for="">Izaberite sliku</label><br>
+                            <input type="file" id="slika" title="Search for a file to add 2" class="genric-btn disable circle">
                             <br><br>
-
                             
-                            <a href="#" class="genric-btn primary circle">Add recipe</a>
-                        </form>
+                            <button id="dodajReceptDugme" class="genric-btn primary circle">Dodaj recept</button>
+                            
+                        
                     </div>
                     
                 </div>
