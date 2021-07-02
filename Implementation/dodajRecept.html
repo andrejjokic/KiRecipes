@@ -103,6 +103,7 @@
                                 <div class="icon"><i class="fa fa-cutlery" aria-hidden="true"></i></div>
                                 <div class="form-select" id="default-select">
                                     <select id="vrsta_jela">
+                                        <option value="" disabled selected>Vrsta jela</option>
                                         <option value="Glavno jelo">Glavno jelo</option>
                                         <option value="Dezert">Dezert</option>
                                         <option value="Predjelo">Predjelo</option>
@@ -122,10 +123,12 @@
                                     " aria-hidden="true"></i></div>
                                 <div class="form-select" id="default-select">
                                     <select id="tezina">
-                                        <option value="">Težina</option>
-                                        <option value="Lako">Lako</option>
-                                        <option value="Srednje">Srednje</option>
-                                        <option value="Tesko">Tesko</option>
+                                        <option value="" disabled selected>Težina</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
                                     </select>
                                 </div>
                             </div>
@@ -135,7 +138,7 @@
                                 <div class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
                                 <div class="form-select" id="default-select">
                                     <select id="vreme">
-                                        <option value="">Vreme</option>
+                                        <option value="" disabled selected>Vreme</option>
                                         <option value="0-15min">0-15min</option>
                                         <option value="15-30min">15-30min</option>
                                         <option value="30-60min">30-60min</option>
@@ -147,10 +150,8 @@
                             <label for="">Izaberite sliku</label><br>
                             <input type="file" id="slika" title="Search for a file to add 2" class="genric-btn disable circle">
                             <br><br>
-                            
+
                             <button id="dodajReceptDugme" class="genric-btn primary circle">Dodaj recept</button>
-                            
-                        
                     </div>
                     
                 </div>

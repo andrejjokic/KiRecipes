@@ -9,6 +9,9 @@ $(document).ready(function(){
         let vreme=document.getElementById("vreme").value;
         let slika=document.getElementById("slika").value;
         let recepti=[];
+        let mediji=[];
+        mediji.push(slika);
+        let korIme="nikola";
         if(localStorage.getItem("recepti")!=null){
             recepti=JSON.parse(localStorage.getItem("recepti"));
         }
@@ -19,7 +22,8 @@ $(document).ready(function(){
                 recept:recept,
                 tezina:tezina,
                 vreme:vreme,
-                slika:slika
+                mediji:mediji,
+                korisnik:korIme
             }
         );
         localStorage.setItem("recepti",JSON.stringify(recepti));
