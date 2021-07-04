@@ -79,42 +79,42 @@ $(document).ready(function() {
     let oceneHC = [
         {
             "kor_ime": "andrej",
-            "ocena": 6,
+            "ocena": 2,
             "recept": "Recept1"
         },
         {
             "kor_ime": "petar",
-            "ocena": 7,
-            "recept": "Recept1"
-        },
-        {
-            "kor_ime": "nikola",
-            "ocena": 8,
-            "recept": "Recept1"
-        },
-        {
-            "kor_ime": "milos",
             "ocena": 3,
             "recept": "Recept1"
         },
         {
-            "kor_ime": "ana",
+            "kor_ime": "nikola",
+            "ocena": 4,
+            "recept": "Recept1"
+        },
+        {
+            "kor_ime": "milos",
             "ocena": 5,
             "recept": "Recept1"
         },
         {
+            "kor_ime": "ana",
+            "ocena": 4,
+            "recept": "Recept1"
+        },
+        {
             "kor_ime": "djordje",
-            "ocena": 7,
+            "ocena": 4,
             "recept": "Recept1"
         },
         {
             "kor_ime": "andrej",
-            "ocena": 7,
+            "ocena": 4,
             "recept": "Recept2"
         },
         {
             "kor_ime": "andrej",
-            "ocena": 8,
+            "ocena": 5,
             "recept": "Recept2"
         }
     ];
