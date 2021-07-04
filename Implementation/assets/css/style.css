@@ -31,3 +31,11 @@
 	height: 200%;
 	width: 100%;
 }
+
+.sortiranje-filtriranje {
+	margin-bottom: 50px;
+}
+
+#sort_lista {
+	font-family: 'FontAwesome', 'Second Font name'
+}

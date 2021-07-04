@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="assets/css/animate-3.7.0.css">
     <link rel="stylesheet" href="assets/css/font-awesome-4.7.0.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-4.1.3.min.css">
+    <link rel="stylesheet" href="assets/fonts/flat-icon/flaticon.css">
     <link rel="stylesheet" href="assets/css/owl-carousel.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
@@ -79,20 +81,6 @@
     </section>
     <!-- Banner Area End -->
 
-    <!--=============== Recipes Header Area ====================-->
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <p id="courses-header" class="index-header">Recepti</p>
-            </div>
-        </div>
-    </div>
-    <!-- Recipes Header Area End -->
-
-    <!-- Filter Area Starts -->
-
-    <!-- Filter Area Ends -->
-
     <!-- Recipes Area Starts -->
     <section class="food-area section-padding">
         <div class="container">
@@ -103,6 +91,27 @@
                         <p class="pt-3">
                             Recepti su prilagodjeni osobama bez iskustva i vrlo su detaljni, slobodno im dajte priliku!
                         </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row sortiranje-filtriranje">
+                <div class="col-6 col-md-8">
+                    <select id="sort_lista">
+                        <option disabled selected>Sortiraj</option>
+                        <option value="najbolje_ocene">Najbolje ocenjeni</option>
+                        <option value="najgore_ocene">Najgore ocenjeni</option>
+                        <option value="najtezi">Najtezi</option>
+                        <option value="najlaksi">Najlaksi</option>
+                    </select>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" id="ime_recepta">
+                        <div class="input-group-append">
+                          <button class="btn btn-warning" type="button" id="pretragaDugme">
+                            <i class="fa fa-search"></i>
+                          </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -133,7 +142,6 @@
         </div>
     </section>
     <!-- Recipes Area End -->
-
 
     <!-- Footer Area Starts -->
     <footer class="footer-area">
