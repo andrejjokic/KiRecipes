@@ -197,7 +197,9 @@ function izracunajProsek(niz) {
 function dodajRecept(recept, broj) {
     let ocene = JSON.parse(localStorage.getItem("ocene"));
     let prosecnaOcena = izracunajProsek(ocene.filter(ocena => ocena.recept == recept.ime_recepta));
-    prosecnaOcena = !isNaN(prosecnaOcena) ? prosecnaOcena + "/10" : "Unrated";
+    if(!isNaN(prosecnaOcena))
+        prosecnaOcena.toFixed(2);
+    prosecnaOcena = !isNaN(prosecnaOcena) ? prosecnaOcena + "/5" : "Unrated";
 
     $("#recepti").append(
         $("<div></div>").addClass("col-md-4").addClass("col-sm-6").addClass("recept-" + Math.ceil(broj / 6)).append(
