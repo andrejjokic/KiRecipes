@@ -7,10 +7,12 @@ $(document).ready(function(){
         let recept=document.getElementById("recept").value;
         let tezina=document.getElementById("tezina").value;
         let vreme=document.getElementById("vreme").value;
-        let slika=document.getElementById("slika").value;
+        let slika=document.getElementById("slika").files[0].name;
+         
+
         let recepti=[];
         let mediji=[];
-        mediji.push(slika);
+        mediji.push("assets/images/"+slika);
         let korIme="nikola";
         if(localStorage.getItem("recepti")!=null){
             recepti=JSON.parse(localStorage.getItem("recepti"));
@@ -20,12 +22,13 @@ $(document).ready(function(){
                 ime_recepta:ime_recepta,
                 vrsta_jela:vrsta_jela,
                 recept:recept,
-                tezina:tezina,
+                tezina:parseInt(tezina),
                 vreme:vreme,
                 mediji:mediji,
                 korisnik:korIme
             }
         );
         localStorage.setItem("recepti",JSON.stringify(recepti));
+        window.location.href="";
     });
 });
