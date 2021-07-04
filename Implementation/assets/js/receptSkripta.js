@@ -16,6 +16,8 @@ $(document).ready(function(){
         slika:"assets/images/blog-details/c2.jpg"
     };
     localStorage.setItem("korisnik",JSON.stringify(korisnik));
+
+    var recept = JSON.parse(localStorage.getItem("recept"));
     
     komentari=[];
     if(localStorage.getItem("komentari")!=null){
@@ -37,7 +39,6 @@ $(document).ready(function(){
     }else{
         $("#brojKomentara").text("Nema komentara");
     }
-    var recept=JSON.parse(localStorage.getItem("recept"));
     $("#nazivJela").text(recept.ime_recepta);
     $("#vrstaJela").text(recept.vrsta_jela);
     $("#recept").text(recept.recept);
