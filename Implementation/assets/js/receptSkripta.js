@@ -93,6 +93,23 @@ $(document).ready(function(){
         window.location.href="";
     });
 
+    $("#dodajSlikuDugme").click(function(){
+        let slika=document.getElementById("slika").files[0].name;
+        recept.mediji.push("assets/images/"+slika);
+        localStorage.setItem("recept",JSON.stringify(recept));
+        var recepti=[];
+        recepti=JSON.parse(localStorage.getItem("recepti"));
+        var i;
+        for(i=0;i<recepti.length;i++){
+            if(recepti[i].ime_recepta==recept.ime_recepta){
+                recepti[i].mediji.push("assets/images/"+slika);
+            }
+        }
+        
+        localStorage.setItem("recepti",JSON.stringify(recepti));
+        window.location.href="";
+    });
+
      /* 1. Visualizing things on Hover - See next part for action on click */
   $('#stars li').on('mouseover', function(){
     var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
