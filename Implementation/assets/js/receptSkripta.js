@@ -1,17 +1,16 @@
 $(document).ready(function(){
     
-    recept={
-            ime_recepta:"Burger",
-            vrsta_jela:"Dezert",
-            recept:"Moje omiljeno jelo",
-            tezina:1,
-            vreme:"0-15min",
-            mediji:["assets/images/food1.jpg","assets/images/food2.jpg","assets/images/food3.jpg"],
-            korisnik:"nikolakrstic99"
-    };
-    localStorage.setItem("recept",JSON.stringify(recept));
+    // recept={
+    //         ime_recepta:"Burger",
+    //         vrsta_jela:"Dezert",
+    //         recept:"Moje omiljeno jelo",
+    //         tezina:1,
+    //         vreme:"0-15min",
+    //         mediji:["assets/images/food1.jpg","assets/images/food2.jpg","assets/images/food3.jpg"],
+    //         korisnik:"nikolakrstic99"
+    // };
+    //localStorage.setItem("recept",JSON.stringify(recept));
     
-    localStorage.setItem("recept",JSON.stringify(recept));
     let korisnik={
         kor_ime:"nikolakrstic99",
         slika:"assets/images/blog-details/c2.jpg"

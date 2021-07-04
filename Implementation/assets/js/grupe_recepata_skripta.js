@@ -203,7 +203,7 @@ function dodajRecept(recept, broj) {
         $("<div></div>").addClass("col-md-4").addClass("col-sm-6").addClass("recept-" + Math.ceil(broj / 6)).append(
             $("<div></div>").addClass("single-food").addClass("mt-5").addClass("mt-sm-0").append(
                 $("<div></div>").addClass("food-img").append(
-                    $("<img>").addClass("img-fluid").attr("src", recept.mediji[0])
+                    $("<img>").addClass("img-fluid").attr("src", recept.mediji[0]).attr("id", recept.ime_recepta).click(receptKliknut)
                 )
             ).append(
                 $("<div></div>").addClass("food-content").append(
@@ -213,7 +213,7 @@ function dodajRecept(recept, broj) {
                         $("<span></span>").addClass("style-change").html(prosecnaOcena)
                     )
                 ).append(
-                    $("<p></p>").addClass("pt-3").html(dohvatiImeKorisnika() + ": " + recept.korisnik + "<br>" + dohvatiImeTezine() + ": " +
+                    $("<p></p>").addClass("pt-3").attr("id", recept.ime_recepta).click(receptKliknut).html(dohvatiImeKorisnika() + ": " + recept.korisnik + "<br>" + dohvatiImeTezine() + ": " +
                      recept.tezina + "<br>" + dohvatiImeVremena() + " : " + recept.vreme)
                 )
             )
@@ -307,4 +307,13 @@ function sortiraj(recepti, predikat) {
             break;
     }
     return ret;
+}
+
+function receptKliknut() {
+    let recepti = JSON.parse(localStorage.getItem("recepti"));
+    let ime = $(this).attr("id");
+    let recept = recepti.find(rec => rec.ime_recepta == ime);
+    localStorage.setItem("recept", JSON.stringify(recept));
+
+    window.location.href = "recept.html";
 }
