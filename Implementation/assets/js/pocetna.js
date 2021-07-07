@@ -85,6 +85,7 @@ function hardcode() {
             tezina: 5,
             vreme: "1h+",
             mediji: ["assets/images/glavna_jela/biftek1.jpg", "assets/images/glavna_jela/biftek2.jpg", "assets/images/glavna_jela/biftek3.jpg"],
+            video : "assets/images/video1.mp4",
             korisnik: "andrejjokic"
         },
         {
@@ -94,6 +95,7 @@ function hardcode() {
             tezina: 5,
             vreme: "30-60min",
             mediji: ["assets/images/glavna_jela/sushi1.png", "assets/images/glavna_jela/sushi2.jpg"],
+            video : "assets/images/video1.mp4",
             korisnik: "andrejjokic"
         },
         {
@@ -103,6 +105,7 @@ function hardcode() {
             tezina: 3,
             vreme: "15-30min",
             mediji: ["assets/images/glavna_jela/burger1.jpg", "assets/images/glavna_jela/burger2.jpg"],
+            video : "assets/images/video1.mp4",
             korisnik: "nikolakrstic"
         },
         {
@@ -112,6 +115,7 @@ function hardcode() {
             tezina: 2,
             vreme: "15-30min",
             mediji: ["assets/images/glavna_jela/batak1.png", "assets/images/glavna_jela/batak2.jpg"],
+            video : "assets/images/video1.mp4",
             korisnik: "andrejjokic"
         },
         {
@@ -121,6 +125,7 @@ function hardcode() {
             tezina: 4,
             vreme: "30-60min",
             mediji: ["assets/images/glavna_jela/medaljoni1.jpg", "assets/images/glavna_jela/medaljoni2.jpg"],
+            video : "assets/images/video1.mp4",
             korisnik: "anamilicevic"
         },
         {
@@ -130,6 +135,7 @@ function hardcode() {
             tezina: 4,
             vreme: "1h+",
             mediji: ["assets/images/glavna_jela/pasulj1.jpg", "assets/images/glavna_jela/pasulj2.jpg", "assets/images/glavna_jela/pasulj3.jpg"],
+            video : "assets/images/video1.mp4",
             korisnik: "petarpetrovic"
         },
         {
@@ -139,6 +145,7 @@ function hardcode() {
             tezina: 2,
             vreme: "0-15min",
             mediji: ["assets/images/glavna_jela/pica1.png", "assets/images/glavna_jela/pica2.jpg", "assets/images/glavna_jela/pica3.jpg"],
+            video : "assets/images/video1.mp4",
             korisnik: "nikolakrstic"
         },
         {
@@ -148,6 +155,7 @@ function hardcode() {
             tezina: 1,
             vreme: "0-15min",
             mediji: ["assets/images/predjela/supa1.jpg", "assets/images/predjela/supa2.jpg"],
+            video : "assets/images/video1.mp4",
             korisnik: "petarpetrovic"
         },
         {
@@ -157,6 +165,7 @@ function hardcode() {
             tezina: 1,
             vreme: "0-15min",
             mediji: ["assets/images/predjela/meze1.jpg"],
+            video : "assets/images/video1.mp4",
             korisnik: "petarpetrovic"
         },
         {
@@ -166,6 +175,7 @@ function hardcode() {
             tezina: 4,
             vreme: "30-60min",
             mediji: ["assets/images/predjela/gibanica1.jpg", "assets/images/predjela/gibanica2.jpg", "assets/images/predjela/gibanica3.jpg"],
+            video : "assets/images/video1.mp4",
             korisnik: "petarpetrovic"
         },
         {
@@ -175,6 +185,7 @@ function hardcode() {
             tezina: 1,
             vreme: "0-15min",
             mediji: ["assets/images/uzine/salata1.jpg", "assets/images/uzine/salata2.jpg"],
+            video : "assets/images/video1.mp4",
             korisnik: "anamilicevic"
         },
         {
@@ -184,6 +195,7 @@ function hardcode() {
             tezina: 1,
             vreme: "0-15min",
             mediji: ["assets/images/uzine/sendvic1.jpg", "assets/images/uzine/sendvic2.jpg"],
+            video : "assets/images/video1.mp4",
             korisnik: "nikolakrstic"
         },
         {
@@ -193,6 +205,7 @@ function hardcode() {
             tezina: 1,
             vreme: "0-15min",
             mediji: ["assets/images/uzine/smoothie1.jpg", "assets/images/uzine/smoothie2.jpg", "assets/images/uzine/smoothie3.jpg"],
+            video : "assets/images/video1.mp4",
             korisnik: "andrejjokic"
         },
         {
@@ -202,6 +215,7 @@ function hardcode() {
             tezina: 1,
             vreme: "15-30min",
             mediji: ["assets/images/dezerti/palacinke1.jpg", "assets/images/dezerti/palacinke2.jpg", "assets/images/dezerti/palacinke3.jpg"],
+            video : "assets/images/video1.mp4",
             korisnik: "andrejjokic"
         },
         {
@@ -211,6 +225,7 @@ function hardcode() {
             tezina: 3,
             vreme: "15-30min",
             mediji: ["assets/images/dezerti/cheesecake1.jpg"],
+            video : "assets/images/video1.mp4",
             korisnik: "anamilicevic"
         },
         {
@@ -220,6 +235,7 @@ function hardcode() {
             tezina: 2,
             vreme: "15-30min",
             mediji: ["assets/images/dezerti/brownie1.jpg", "assets/images/dezerti/brownie2.jpg"],
+            video : "assets/images/video1.mp4",
             korisnik: "nikolakrstic"
         },
     ];
