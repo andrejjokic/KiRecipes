@@ -20,7 +20,11 @@ function popuniNajboljeRecepte() {
 
     // Popuni prvog
     $("#najbolji-naslov-1").html(recepti[0].ime_recepta);
-    $("#najbolji-tekst-1").html("Korisnik: " + recepti[0].korisnik + "<br>" + "Tezina: " + recepti[0].tezina + "<br>" + "Vreme: " + recepti[0].vreme);
+    if (localStorage.getItem("jezik") == "srpski") {
+        $("#najbolji-tekst-1").html("Korisnik: " + recepti[0].korisnik + "<br>" + "Tezina: " + recepti[0].tezina + "<br>" + "Vreme: " + recepti[0].vreme);
+    } else {
+        $("#najbolji-tekst-1").html("User: " + recepti[0].korisnik + "<br>" + "Difficulty: " + recepti[0].tezina + "<br>" + "Time: " + recepti[0].vreme);
+    }
     prosecnaOcena = izracunajProsek(ocene.filter(ocena => ocena.recept == recepti[0].ime_recepta));
     prosecnaOcena = prosecnaOcena > 0 ? prosecnaOcena.toFixed(1) + "/5.0" : "Unrated";
     $("#najbolji-ocena-1").html(prosecnaOcena);
@@ -28,7 +32,11 @@ function popuniNajboljeRecepte() {
 
     // Popuni drugog
     $("#najbolji-naslov-2").html(recepti[1].ime_recepta);
-    $("#najbolji-tekst-2").html("Korisnik: " + recepti[1].korisnik + "<br>" + "Tezina: " + recepti[1].tezina + "<br>" + "Vreme: " + recepti[1].vreme);
+    if (localStorage.getItem("jezik") == "srpski") {
+        $("#najbolji-tekst-2").html("Korisnik: " + recepti[1].korisnik + "<br>" + "Tezina: " + recepti[1].tezina + "<br>" + "Vreme: " + recepti[1].vreme);
+    } else {
+        $("#najbolji-tekst-2").html("User: " + recepti[1].korisnik + "<br>" + "Difficulty: " + recepti[1].tezina + "<br>" + "Time: " + recepti[1].vreme);
+    }
     prosecnaOcena = izracunajProsek(ocene.filter(ocena => ocena.recept == recepti[1].ime_recepta));
     prosecnaOcena = prosecnaOcena > 0 ? prosecnaOcena.toFixed(1) + "/5.0" : "Unrated";
     $("#najbolji-ocena-2").html(prosecnaOcena);
@@ -36,7 +44,11 @@ function popuniNajboljeRecepte() {
 
     // Popuni treceg
     $("#najbolji-naslov-3").html(recepti[2].ime_recepta);
-    $("#najbolji-tekst-3").html("Korisnik: " + recepti[2].korisnik + "<br>" + "Tezina: " + recepti[2].tezina + "<br>" + "Vreme: " + recepti[2].vreme);
+    if (localStorage.getItem("jezik") == "srpski") {
+        $("#najbolji-tekst-3").html("Korisnik: " + recepti[2].korisnik + "<br>" + "Tezina: " + recepti[2].tezina + "<br>" + "Vreme: " + recepti[2].vreme);
+    } else {
+        $("#najbolji-tekst-3").html("User: " + recepti[2].korisnik + "<br>" + "Difficulty: " + recepti[2].tezina + "<br>" + "Time: " + recepti[2].vreme);
+    }
     prosecnaOcena = izracunajProsek(ocene.filter(ocena => ocena.recept == recepti[2].ime_recepta));
     prosecnaOcena = prosecnaOcena > 0 ? prosecnaOcena.toFixed(1) + "/5.0" : "Unrated";
     $("#najbolji-ocena-3").html(prosecnaOcena);

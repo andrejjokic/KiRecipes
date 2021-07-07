@@ -186,3 +186,13 @@
        .rating-stars ul > li.star.selected > i.fa {
        color:#FF912C;
        }
+
+.srp, .eng {
+	width: 70px;
+	height: 30px;
+	border: 2px solid black;
+}
+
+.srp:hover, .eng:hover {
+	border: 2px solid red;
+}

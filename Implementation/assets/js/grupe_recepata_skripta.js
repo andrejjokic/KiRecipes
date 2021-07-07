@@ -8,7 +8,7 @@ $(document).ready(function() {
     $(document).prop('title', 'Recepti / ' + imeGrupe);
     $(".naslov").html(imeGrupe);
 
-    if (imeGrupe !== "Svi recepti") {
+    if (imeGrupe !== "Svi recepti" && imeGrupe !== "All recipes") {
         recepti = recepti.filter(recept => recept.vrsta_jela == grupa);
     }
 
@@ -26,25 +26,32 @@ $(document).ready(function() {
         dodajRecepte([recept]);
     });
 
-    $("#sort_lista").change(function() {
-        let val = $("#sort_lista option:selected").val();
+    $("#sort_lista1").change(function() {
+        let val = $("#sort_lista1 option:selected").val();
+        let rec = sortiraj(recepti, val);
+        dodajRecepte(rec);
+    });
+
+    $("#sort_lista2").change(function() {
+        let val = $("#sort_lista2 option:selected").val();
         let rec = sortiraj(recepti, val);
         dodajRecepte(rec);
     });
 });
 
 function dohvatiImeGrupe(grupa) {
+    let jezik = localStorage.getItem("jezik");
     switch (grupa) {
         case "glavno_jelo":
-            return "Glavna jela";
+            return jezik == "srpski" ? "Glavna jela" : "Main dishes";
         case "predjelo":
-            return "Predjela";
+            return jezik == "srpski" ? "Predjela " : "Appetizers";
         case "dezert":
-            return "Dezerti";
+            return jezik == "srpski" ? "Dezerti" : "Deserts";
         case "uzina":
-            return "Uzine";
+            return jezik == "srpski" ? "Uzine" : "Snacks";
         case "svi":
-            return "Svi recepti";
+            return jezik == "srpski" ? "Svi recepti" : "All recipes";
         default:
             return "Ne postoji";
     }

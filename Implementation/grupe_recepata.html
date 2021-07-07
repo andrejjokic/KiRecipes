@@ -115,7 +115,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="naslov"><i></i></h1>
-                    <span>Recepti</span>
+                    <span class="srpski">Recepti</span>
+                    <span class="engleski">Recipes</span>
                     <span class="mx-2">/</span>
                     <span class="naslov"></span>
                 </div>
@@ -129,22 +130,37 @@
         <div class="container">
             <div class="row" id="recepti-naslov">
                 <div class="col-md-5">
-                    <div class="section-top">
+                    <div class="section-top srpski">
                         <h3><span class="style-change">Probajte</span> neki <br> od nasih ukusnih recepata</h3>
                         <p class="pt-3">
                             Recepti su prilagodjeni osobama bez iskustva i vrlo su detaljni, slobodno im dajte priliku!
                         </p>
                     </div>
+                    <div class="section-top engleski">
+                        <h3><span class="style-change">Check out</span> some of our's <br> most delicious recipes</h3>
+                        <p class="pt-3">
+                            Recipes are adapted for people with no prior experienced and are really detailed, feel free to give them a chance!
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="row sortiranje-filtriranje">
-                <div class="col-6 col-md-8">
-                    <select id="sort_lista">
+                <div class="col-6 col-md-8 srpski">
+                    <select id="sort_lista1">
                         <option disabled selected>Sortiraj</option>
                         <option value="najbolje_ocene">Najbolje ocenjeni</option>
                         <option value="najgore_ocene">Najgore ocenjeni</option>
                         <option value="najtezi">Najtezi</option>
                         <option value="najlaksi">Najlaksi</option>
+                    </select>
+                </div>
+                <div class="col-6 col-md-8 engleski">
+                    <select id="sort_lista2">
+                        <option disabled selected>Sort</option>
+                        <option value="najbolje_ocene">Best rated</option>
+                        <option value="najgore_ocene">Worst rated</option>
+                        <option value="najtezi">Hardest</option>
+                        <option value="najlaksi">Easiest</option>
                     </select>
                 </div>
                 <div class="col-6 col-md-4">
