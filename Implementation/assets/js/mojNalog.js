@@ -3,6 +3,7 @@ $(document).ready(function(){
     let korisnik = JSON.parse(localStorage.getItem("korisnik"));
     $("#imeKorisnika").text(korisnik.kor_ime);
     $("#slika").attr("src",korisnik.slika);
+    let jezik=localStorage.getItem("jezik");
 
     let komentari=[];
     if(localStorage.getItem("komentari")!=null){
@@ -23,7 +24,10 @@ $(document).ready(function(){
             $("#komentari").append(komentList);
         }
     }else{
-        $("#brojKomentara").text("Nema komentara");
+        if(jezik=="srpski")
+            $("#brojKomentara").text("Nema komentara");
+        else
+            $("#brojKomentara").text("No comments");
     }
 
     let ocene=[];
