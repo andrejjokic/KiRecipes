@@ -11,7 +11,9 @@ $(document).ready(function(){
             sum+=nizOcena[i].ocena;
         }
     }
-    
+    if(cnt==0)
+    $("#ocena").text("Ne ocenjena");
+    else
     $("#ocena").text((sum/cnt).toFixed(2));
 
     komentari=[];
@@ -54,15 +56,27 @@ $(document).ready(function(){
     
     let mediji=[];
     mediji=recept.mediji;
-     
+    let video=recept.video; 
     let slide=$("#slideShow");
+
+
+    if(video!=null){
+      let videoDiv=$("<video width='320' height='240' controls><source src='"+recept.video+"' type='video/mp4'></video>");
+      $("#videoDiv").append(videoDiv);
+    }
     
-    
+    if(mediji.length==0){
+      let slika=$("<div class='single-slide d-sm-flex'></div>").append($("<img>").attr("src","assets/images/no-image.png")).css({
+        "width":"300px"
+      });
+      slide.append(slika);
+    }
     for(let i=0;i<mediji.length;i++){
-        let slika=$("<div class='single-slide d-sm-flex'></div>").append($("<img>").attr("src",mediji[i])).css({
-            "width":"300px"
-        });
-        slide.append(slika);
+          let slika=$("<div class='single-slide d-sm-flex'></div>").append($("<img>").attr("src",mediji[i])).css({
+              "width":"300px"
+          });
+          slide.append(slika);
+      
     }
 
     $("#dugmeKomentar").click(function(){

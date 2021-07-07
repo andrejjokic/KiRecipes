@@ -8,7 +8,7 @@ $(document).ready(function(){
         let tezina=document.getElementById("tezina").value;
         let vreme=document.getElementById("vreme").value;
         let slika=document.getElementById("slika").files[0].name;
-         
+        let video=document.getElementById("video").files[0].name;
 
         let recepti=[];
         let mediji=[];
@@ -25,6 +25,7 @@ $(document).ready(function(){
                 tezina:parseInt(tezina),
                 vreme:vreme,
                 mediji:mediji,
+                video:"assets/images/"+video,
                 korisnik:korIme
             }
         );
