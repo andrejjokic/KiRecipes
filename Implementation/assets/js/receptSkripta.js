@@ -15,15 +15,24 @@ $(document).ready(function(){
     $("#ocena").text((sum/cnt).toFixed(2));
 
     komentari=[];
+    let koriscnici=[];
+    if(localStorage.getItem("korisnici")!=null){
+      koriscnici=JSON.parse(localStorage.getItem("korisnici"));
+    }
     if(localStorage.getItem("komentari") != null){
         komentari=JSON.parse(localStorage.getItem("komentari"));
         komentari=komentari.filter(com=>com.recept==recept.ime_recepta);
         $("#brojKomentara").text(komentari.length+" komentara");
+        
         for(let i=0;i<komentari.length;i++){
+            let pomKor=komentari[i].kor_ime;
+            var trenKorisnik=koriscnici.filter(tmp => tmp.kor_ime == pomKor)[0];
+            
+            //alert(trenKorisnik.slika);
+            
             let komentList=$("<div class='comment-list'></div>");
             let komentar=$("<div class='user justify-content-between d-flex'></div>");
-            let slikaKorisnika=$("<div class='tumb'></div>").append($("<img>").attr("src",korisnik.slika));
-            let tekst=$("<div class='desc'><br></div>");
+            let slikaKorisnika=$("<div class='tumb'></div>").append($("<img>").attr("src",trenKorisnik.slika));
             let ime=$("<h5></h5>").text(komentari[i].kor_ime);
             let kom=$("<p class='comment'></p>").text(komentari[i].komentar);
             slikaKorisnika.append(ime).append(kom);
@@ -34,6 +43,7 @@ $(document).ready(function(){
     }else{
         $("#brojKomentara").text("Nema komentara");
     }
+    $("#vrsta_jela").text(recept.vrsta_jela);
     $("#imeRecepta").text(recept.ime_recepta);
     $("#nazivJela").text(recept.ime_recepta);
     $("#vrstaJela").text(recept.vrsta_jela);
