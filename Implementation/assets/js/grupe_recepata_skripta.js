@@ -3,127 +3,278 @@ $(document).ready(function() {
     // Sluzi samo za testiranje, bice prebaceno u main skriptu
     let receptiHC = [
         {
-            ime_recepta: "Recept1",
+            ime_recepta: "Biftek",
             vrsta_jela: "glavno_jelo",
             recept: "Koraci recepta",
-            tezina: 1,
-            vreme: "0-15min",
-            mediji: ["assets/images/deshes2.png", "assets/images/food1.jpg"],
-            korisnik: "Korisnicko ime"
+            tezina: 5,
+            vreme: "1h+",
+            mediji: ["assets/images/glavna_jela/biftek1.jpg", "assets/images/glavna_jela/biftek2.jpg", "assets/images/glavna_jela/bifftek3.jpg"],
+            korisnik: "andrejjokic"
         },
         {
-            ime_recepta: "Recept2",
+            ime_recepta: "Sushi",
             vrsta_jela: "glavno_jelo",
             recept: "Koraci recepta",
-            tezina: 2,
-            vreme: "0-15min",
-            mediji: ["assets/images/deshes2.png", "assets/images/food1.jpg"],
-            korisnik: "Korisnicko ime"
+            tezina: 5,
+            vreme: "30-60min",
+            mediji: ["assets/images/glavna_jela/sushi1.png", "assets/images/glavna_jela/sushi2.jpg"],
+            korisnik: "andrejjokic"
         },
         {
-            ime_recepta: "Recept3",
-            vrsta_jela: "glavno_jelo",
-            recept: "Koraci recepta",
-            tezina: 1,
-            vreme: "0-15min",
-            mediji: ["assets/images/deshes2.png", "assets/images/food1.jpg"],
-            korisnik: "Korisnicko ime"
-        },
-        {
-            ime_recepta: "Recept4",
+            ime_recepta: "Burger",
             vrsta_jela: "glavno_jelo",
             recept: "Koraci recepta",
             tezina: 3,
-            vreme: "0-15min",
-            mediji: ["assets/images/deshes2.png", "assets/images/food1.jpg"],
-            korisnik: "Korisnicko ime"
+            vreme: "15-30min",
+            mediji: ["assets/images/glavna_jela/burger1.jpg", "assets/images/glavna_jela/burger2.jpg"],
+            korisnik: "nikolakrstic"
         },
         {
-            ime_recepta: "Recept5",
+            ime_recepta: "Batak",
             vrsta_jela: "glavno_jelo",
             recept: "Koraci recepta",
             tezina: 2,
-            vreme: "0-15min",
-            mediji: ["assets/images/deshes2.png", "assets/images/food1.jpg"],
-            korisnik: "Korisnicko ime"
+            vreme: "15-30min",
+            mediji: ["assets/images/glavna_jela/batak1.png", "assets/images/glavna_jela/batak2.jpg"],
+            korisnik: "andrejjokic"
         },
         {
-            ime_recepta: "Recept6",
+            ime_recepta: "Medaljoni",
             vrsta_jela: "glavno_jelo",
             recept: "Koraci recepta",
             tezina: 4,
-            vreme: "0-15min",
-            mediji: ["assets/images/deshes2.png", "assets/images/food1.jpg"],
-            korisnik: "Korisnicko ime"
+            vreme: "30-60min",
+            mediji: ["assets/images/glavna_jela/medaljoni1.jpg", "assets/images/glavna_jela/medaljoni2.jpg"],
+            korisnik: "anamilicevic"
         },
         {
-            ime_recepta: "Recept7",
+            ime_recepta: "Pasulj",
             vrsta_jela: "glavno_jelo",
             recept: "Koraci recepta",
-            tezina: 3,
-            vreme: "0-15min",
-            mediji: ["assets/images/deshes2.png", "assets/images/food1.jpg"],
-            korisnik: "Korisnicko ime"
+            tezina: 4,
+            vreme: "1h+",
+            mediji: ["assets/images/glavna_jela/pasulj1.jpg", "assets/images/glavna_jela/pasulj2.jpg", "assets/images/glavna_jela/pasulj3.jpg"],
+            korisnik: "petarpetrovic"
         },
         {
-            ime_recepta: "Recept8",
+            ime_recepta: "Pica",
             vrsta_jela: "glavno_jelo",
+            recept: "Koraci recepta",
+            tezina: 2,
+            vreme: "0-15min",
+            mediji: ["assets/images/glavna_jela/pica1.png", "assets/images/glavna_jela/pica2.jpg", "assets/images/glavna_jela/pica3.jpg"],
+            korisnik: "nikolakrstic"
+        },
+        {
+            ime_recepta: "Supa",
+            vrsta_jela: "predjelo",
             recept: "Koraci recepta",
             tezina: 1,
             vreme: "0-15min",
-            mediji: ["assets/images/deshes2.png", "assets/images/food1.jpg"],
-            korisnik: "Korisnicko ime"
-        }
+            mediji: ["assets/images/predjela/supa1.jpg", "assets/images/predjela/supa2.jpg"],
+            korisnik: "petarpetrovic"
+        },
+        {
+            ime_recepta: "Meze",
+            vrsta_jela: "predjelo",
+            recept: "Koraci recepta",
+            tezina: 1,
+            vreme: "0-15min",
+            mediji: ["assets/images/predjela/meze1.jpg"],
+            korisnik: "petarpetrovic"
+        },
+        {
+            ime_recepta: "Gibanica",
+            vrsta_jela: "predjelo",
+            recept: "Koraci recepta",
+            tezina: 4,
+            vreme: "30-60min",
+            mediji: ["assets/images/predjela/gibanica1.jpg", "assets/images/predjela/gibanica2.jpg", "assets/images/predjela/gibanica3.jpg"],
+            korisnik: "petarpetrovic"
+        },
+        {
+            ime_recepta: "Salata",
+            vrsta_jela: "uzina",
+            recept: "Koraci recepta",
+            tezina: 1,
+            vreme: "0-15min",
+            mediji: ["assets/images/uzine/salata1.jpg", "assets/images/uzine/salata2.jpg"],
+            korisnik: "anamilicevic"
+        },
+        {
+            ime_recepta: "Sendvic",
+            vrsta_jela: "uzina",
+            recept: "Koraci recepta",
+            tezina: 1,
+            vreme: "0-15min",
+            mediji: ["assets/images/uzine/sendvic1.jpg", "assets/images/uzine/sendvic2.jpg"],
+            korisnik: "nikolakrstic"
+        },
+        {
+            ime_recepta: "Smoothie",
+            vrsta_jela: "uzina",
+            recept: "Koraci recepta",
+            tezina: 1,
+            vreme: "0-15min",
+            mediji: ["assets/images/uzine/smoothie1.jpg", "assets/images/uzine/smoothie2.jpg", "assets/images/uzine/smoothie3.jpg"],
+            korisnik: "andrejjokic"
+        },
+        {
+            ime_recepta: "Palacinke",
+            vrsta_jela: "dezert",
+            recept: "Koraci recepta",
+            tezina: 1,
+            vreme: "15-30min",
+            mediji: ["assets/images/dezerti/palacinke1.jpg", "assets/images/dezerti/palacinke2.jpg", "assets/images/dezerti/palacinke3.jpg"],
+            korisnik: "andrejjokic"
+        },
+        {
+            ime_recepta: "Cheesecake",
+            vrsta_jela: "dezert",
+            recept: "Koraci recepta",
+            tezina: 3,
+            vreme: "15-30min",
+            mediji: ["assets/images/dezerti/cheesecake1.jpg"],
+            korisnik: "anamilicevic"
+        },
+        {
+            ime_recepta: "Brownie",
+            vrsta_jela: "dezert",
+            recept: "Koraci recepta",
+            tezina: 2,
+            vreme: "15-30min",
+            mediji: ["assets/images/dezerti/brownie1.jpg", "assets/images/dezerti/brownie2.jpg"],
+            korisnik: "nikolakrstic"
+        },
     ];
 
     let oceneHC = [
         {
-            "kor_ime": "andrej",
-            "ocena": 2,
-            "recept": "Recept1"
-        },
-        {
-            "kor_ime": "petar",
+            "kor_ime": "anamilicevic",
             "ocena": 3,
-            "recept": "Recept1"
+            "recept": "Biftek"
         },
         {
-            "kor_ime": "nikola",
+            "kor_ime": "nikolakrstic",
             "ocena": 4,
-            "recept": "Recept1"
+            "recept": "Biftek"
         },
         {
-            "kor_ime": "milos",
+            "kor_ime": "petarpetrovic",
+            "ocena": 4,
+            "recept": "Biftek"
+        },
+        {
+            "kor_ime": "nikolakrstic",
+            "ocena": 2,
+            "recept": "Sushi"
+        },
+        {
+            "kor_ime": "anamilicevic",
+            "ocena": 1,
+            "recept": "Sushi"
+        },
+        {
+            "kor_ime": "andrejjokic",
+            "ocena": 4,
+            "recept": "Burger"
+        },
+        {
+            "kor_ime": "anamilicevic",
+            "ocena": 2,
+            "recept": "Burger"
+        },
+        {
+            "kor_ime": "petarpetrovic",
+            "ocena": 3,
+            "recept": "Burger"
+        },
+        {
+            "kor_ime": "nikolakrstic",
+            "ocena": 2,
+            "recept": "Batak"
+        },
+        {
+            "kor_ime": "andrejjokic",
+            "ocena": 4,
+            "recept": "Pasulj"
+        },
+        {
+            "kor_ime": "nikolakrstic",
+            "ocena": 3,
+            "recept": "Pasulj"
+        },
+        {
+            "kor_ime": "andrejjokic",
             "ocena": 5,
-            "recept": "Recept1"
+            "recept": "Pica"
         },
         {
-            "kor_ime": "ana",
-            "ocena": 4,
-            "recept": "Recept1"
-        },
-        {
-            "kor_ime": "djordje",
-            "ocena": 4,
-            "recept": "Recept1"
-        },
-        {
-            "kor_ime": "andrej",
-            "ocena": 4,
-            "recept": "Recept2"
-        },
-        {
-            "kor_ime": "andrej",
+            "kor_ime": "anamilicevic",
             "ocena": 5,
-            "recept": "Recept2"
+            "recept": "Pica"
+        },
+        {
+            "kor_ime": "petarpetrovic",
+            "ocena": 5,
+            "recept": "Pica"
+        },
+        {
+            "kor_ime": "andrejjokic",
+            "ocena": 4,
+            "recept": "Supa"
+        },
+        {
+            "kor_ime": "andrejjokic",
+            "ocena": 4,
+            "recept": "Gibanica"
+        },
+        {
+            "kor_ime": "nikolakrstic",
+            "ocena": 3,
+            "recept": "Gibanica"
+        },
+        {
+            "kor_ime": "anamilicevic",
+            "ocena": 4,
+            "recept": "Gibanica"
+        },
+        {
+            "kor_ime": "andrejjokic",
+            "ocena": 5,
+            "recept": "Salata"
+        },
+        {
+            "kor_ime": "nikolakrstic",
+            "ocena": 5,
+            "recept": "Smoothie"
+        },
+        {
+            "kor_ime": "anamilicevic",
+            "ocena": 4,
+            "recept": "Smoothie"
+        },
+        {
+            "kor_ime": "anamilicevic",
+            "ocena": 5,
+            "recept": "Palacinke"
+        },
+        {
+            "kor_ime": "nikolakrstic",
+            "ocena": 5,
+            "recept": "Palacinke"
+        },
+        {
+            "kor_ime": "andrejjokic",
+            "ocena": 2,
+            "recept": "Brownie"
         }
     ];
 
     localStorage.setItem("recepti", JSON.stringify(receptiHC));
-    localStorage.setItem("trenutna_grupa_recepata", "glavno_jelo");
+    // localStorage.setItem("trenutna_grupa_recepata", "glavno_jelo");
     localStorage.setItem("jezik", "srpski");
     localStorage.setItem("ocene", JSON.stringify(oceneHC));
-
 
     // Krece pravi kod
     let grupa = localStorage.getItem("trenutna_grupa_recepata");
@@ -133,7 +284,9 @@ $(document).ready(function() {
     $(document).prop('title', 'Recepti / ' + imeGrupe);
     $(".naslov").html(imeGrupe);
 
-    recepti = recepti.filter(recept => recept.vrsta_jela == grupa);
+    if (imeGrupe !== "Svi recepti") {
+        recepti = recepti.filter(recept => recept.vrsta_jela == grupa);
+    }
 
     dodajRecepte(recepti);
 
@@ -166,6 +319,8 @@ function dohvatiImeGrupe(grupa) {
             return "Dezerti";
         case "uzina":
             return "Uzine";
+        case "svi":
+            return "Svi recepti";
         default:
             return "Ne postoji";
     }
@@ -187,6 +342,7 @@ function dohvatiImeKorisnika() {
 }
 
 function izracunajProsek(niz) {
+    if (niz.length == 0) return 0;
     let suma = 0;
     for (let i = 0; i < niz.length; i++) {
         suma += niz[i].ocena;
@@ -197,13 +353,13 @@ function izracunajProsek(niz) {
 function dodajRecept(recept, broj) {
     let ocene = JSON.parse(localStorage.getItem("ocene"));
     let prosecnaOcena = izracunajProsek(ocene.filter(ocena => ocena.recept == recept.ime_recepta));
-    prosecnaOcena = !isNaN(prosecnaOcena) ? prosecnaOcena.toFixed(1) + "/5" : "Unrated";
+    prosecnaOcena = prosecnaOcena > 0 ? prosecnaOcena.toFixed(1) + "/5.0" : "Unrated";
 
     $("#recepti").append(
         $("<div></div>").addClass("col-md-4").addClass("col-sm-6").addClass("recept-" + Math.ceil(broj / 6)).append(
             $("<div></div>").addClass("single-food").addClass("mt-5").addClass("mt-sm-0").append(
                 $("<div></div>").addClass("food-img").append(
-                    $("<img>").addClass("img-fluid").attr("src", recept.mediji[0]).attr("id", recept.ime_recepta).click(receptKliknut)
+                    $("<img>").addClass("recept-slika").addClass("img-fluid").attr("src", recept.mediji[0]).attr("id", recept.ime_recepta).click(receptKliknut)
                 )
             ).append(
                 $("<div></div>").addClass("food-content").append(
@@ -297,12 +453,24 @@ function sortiraj(recepti, predikat) {
             break;
         case "najgore_ocene":
             ret.sort(function(a, b) {
-                return izracunajProsek(ocene.filter(ocena => ocena.recept == a.ime_recepta)) - izracunajProsek(ocene.filter(ocena => ocena.recept == b.ime_recepta));
+                // return izracunajProsek(ocene.filter(ocena => ocena.recept == a.ime_recepta)) - izracunajProsek(ocene.filter(ocena => ocena.recept == b.ime_recepta));
+                let aP = izracunajProsek(ocene.filter(ocena => ocena.recept == a.ime_recepta));
+                let bP = izracunajProsek(ocene.filter(ocena => ocena.recept == b.ime_recepta));
+
+                if (aP == 0) return 1;
+                if (bP == 0) return -1;
+                return aP - bP;
             });
             break;
         case "najbolje_ocene":
             ret.sort(function(a, b) {
-                return izracunajProsek(ocene.filter(ocena => ocena.recept == b.ime_recepta)) - izracunajProsek(ocene.filter(ocena => ocena.recept == a.ime_recepta));
+                // return izracunajProsek(ocene.filter(ocena => ocena.recept == b.ime_recepta)) - izracunajProsek(ocene.filter(ocena => ocena.recept == a.ime_recepta));
+                let aP = izracunajProsek(ocene.filter(ocena => ocena.recept == a.ime_recepta));
+                let bP = izracunajProsek(ocene.filter(ocena => ocena.recept == b.ime_recepta));
+
+                if (aP == 0) return 1;
+                if (bP == 0) return -1;
+                return bP - aP;
             });
             break;
     }
