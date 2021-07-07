@@ -53,6 +53,7 @@ $(document).ready(function(){
     }else{
         $("#brojKomentara").text("Nema komentara");
     }
+    $("#imeRecepta").text(recept.ime_recepta);
     $("#nazivJela").text(recept.ime_recepta);
     $("#vrstaJela").text(recept.vrsta_jela);
     $("#recept").text(recept.recept);
@@ -167,9 +168,23 @@ $(document).ready(function(){
     localStorage.setItem("ocene",JSON.stringify(ocene));
     window.location.href="";
   });
-    
-});
 
+  $("#skiniPDF").on("click",function(){
+    var doc = new jsPDF();
+    let recept=JSON.parse(localStorage.getItem("recept"));
+    let txt=recept.ime_recepta+"\n";
+    txt+="Autor recepta je: " + recept.korisnik;
+    txt+="\nTezina recepta od 1-5 je: " + recept.tezina;
+    txt+="\nVreme pripreme recepta je: " + recept.vreme;
+    txt+="\nVrsta jela je: " + recept.vrsta_jela;
+    txt+="\nDirections: \n";
+    txt+=recept.recept;
+    doc.text(10, 50, txt);
+    doc.save(recept.ime_recepta + '.pdf');
+  });
+
+  
+});
 function responseMessage(msg) {
     $('.success-box').fadeIn(200);  
     $('.success-box div.text-message').html("<span>" + msg + "</span>");
