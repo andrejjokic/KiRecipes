@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    hardcode();
     popuniNajboljeRecepte();
     popuniKomentare();
 });
@@ -53,7 +53,300 @@ function izracunajProsek(niz) {
 }
 
 function popuniKomentare() {
-    // Hardcode deo
+    let komentari = JSON.parse(localStorage.getItem("komentari"));
+    
+    // Popuni prvog
+    $("#komentar-ime-1").html(komentari[0].kor_ime);
+    $("#komentar-recept-1").html(komentari[0].recept);
+    $("#komentar-tekst-1").html(komentari[0].komentar);
+
+    // Popuni drugog
+    $("#komentar-ime-2").html(komentari[1].kor_ime);
+    $("#komentar-recept-2").html(komentari[1].recept);
+    $("#komentar-tekst-2").html(komentari[1].komentar);
+
+    // Popuni prvog
+    $("#komentar-ime-3").html(komentari[2].kor_ime);
+    $("#komentar-recept-3").html(komentari[2].recept);
+    $("#komentar-tekst-3").html(komentari[2].komentar);
+
+    // Popuni prvog
+    $("#komentar-ime-4").html(komentari[3].kor_ime);
+    $("#komentar-recept-4").html(komentari[3].recept);
+    $("#komentar-tekst-4").html(komentari[3].komentar);
+}
+
+function hardcode() {
+    let receptiHC = [
+        {
+            ime_recepta: "Biftek",
+            vrsta_jela: "glavno_jelo",
+            recept: "Koraci recepta",
+            tezina: 5,
+            vreme: "1h+",
+            mediji: ["assets/images/glavna_jela/biftek1.jpg", "assets/images/glavna_jela/biftek2.jpg", "assets/images/glavna_jela/biftek3.jpg"],
+            korisnik: "andrejjokic"
+        },
+        {
+            ime_recepta: "Sushi",
+            vrsta_jela: "glavno_jelo",
+            recept: "Koraci recepta",
+            tezina: 5,
+            vreme: "30-60min",
+            mediji: ["assets/images/glavna_jela/sushi1.png", "assets/images/glavna_jela/sushi2.jpg"],
+            korisnik: "andrejjokic"
+        },
+        {
+            ime_recepta: "Burger",
+            vrsta_jela: "glavno_jelo",
+            recept: "Koraci recepta",
+            tezina: 3,
+            vreme: "15-30min",
+            mediji: ["assets/images/glavna_jela/burger1.jpg", "assets/images/glavna_jela/burger2.jpg"],
+            korisnik: "nikolakrstic"
+        },
+        {
+            ime_recepta: "Batak",
+            vrsta_jela: "glavno_jelo",
+            recept: "Koraci recepta",
+            tezina: 2,
+            vreme: "15-30min",
+            mediji: ["assets/images/glavna_jela/batak1.png", "assets/images/glavna_jela/batak2.jpg"],
+            korisnik: "andrejjokic"
+        },
+        {
+            ime_recepta: "Medaljoni",
+            vrsta_jela: "glavno_jelo",
+            recept: "Koraci recepta",
+            tezina: 4,
+            vreme: "30-60min",
+            mediji: ["assets/images/glavna_jela/medaljoni1.jpg", "assets/images/glavna_jela/medaljoni2.jpg"],
+            korisnik: "anamilicevic"
+        },
+        {
+            ime_recepta: "Pasulj",
+            vrsta_jela: "glavno_jelo",
+            recept: "Koraci recepta",
+            tezina: 4,
+            vreme: "1h+",
+            mediji: ["assets/images/glavna_jela/pasulj1.jpg", "assets/images/glavna_jela/pasulj2.jpg", "assets/images/glavna_jela/pasulj3.jpg"],
+            korisnik: "petarpetrovic"
+        },
+        {
+            ime_recepta: "Pica",
+            vrsta_jela: "glavno_jelo",
+            recept: "Koraci recepta",
+            tezina: 2,
+            vreme: "0-15min",
+            mediji: ["assets/images/glavna_jela/pica1.png", "assets/images/glavna_jela/pica2.jpg", "assets/images/glavna_jela/pica3.jpg"],
+            korisnik: "nikolakrstic"
+        },
+        {
+            ime_recepta: "Supa",
+            vrsta_jela: "predjelo",
+            recept: "Koraci recepta",
+            tezina: 1,
+            vreme: "0-15min",
+            mediji: ["assets/images/predjela/supa1.jpg", "assets/images/predjela/supa2.jpg"],
+            korisnik: "petarpetrovic"
+        },
+        {
+            ime_recepta: "Meze",
+            vrsta_jela: "predjelo",
+            recept: "Koraci recepta",
+            tezina: 1,
+            vreme: "0-15min",
+            mediji: ["assets/images/predjela/meze1.jpg"],
+            korisnik: "petarpetrovic"
+        },
+        {
+            ime_recepta: "Gibanica",
+            vrsta_jela: "predjelo",
+            recept: "Koraci recepta",
+            tezina: 4,
+            vreme: "30-60min",
+            mediji: ["assets/images/predjela/gibanica1.jpg", "assets/images/predjela/gibanica2.jpg", "assets/images/predjela/gibanica3.jpg"],
+            korisnik: "petarpetrovic"
+        },
+        {
+            ime_recepta: "Salata",
+            vrsta_jela: "uzina",
+            recept: "Koraci recepta",
+            tezina: 1,
+            vreme: "0-15min",
+            mediji: ["assets/images/uzine/salata1.jpg", "assets/images/uzine/salata2.jpg"],
+            korisnik: "anamilicevic"
+        },
+        {
+            ime_recepta: "Sendvic",
+            vrsta_jela: "uzina",
+            recept: "Koraci recepta",
+            tezina: 1,
+            vreme: "0-15min",
+            mediji: ["assets/images/uzine/sendvic1.jpg", "assets/images/uzine/sendvic2.jpg"],
+            korisnik: "nikolakrstic"
+        },
+        {
+            ime_recepta: "Smoothie",
+            vrsta_jela: "uzina",
+            recept: "Koraci recepta",
+            tezina: 1,
+            vreme: "0-15min",
+            mediji: ["assets/images/uzine/smoothie1.jpg", "assets/images/uzine/smoothie2.jpg", "assets/images/uzine/smoothie3.jpg"],
+            korisnik: "andrejjokic"
+        },
+        {
+            ime_recepta: "Palacinke",
+            vrsta_jela: "dezert",
+            recept: "Koraci recepta",
+            tezina: 1,
+            vreme: "15-30min",
+            mediji: ["assets/images/dezerti/palacinke1.jpg", "assets/images/dezerti/palacinke2.jpg", "assets/images/dezerti/palacinke3.jpg"],
+            korisnik: "andrejjokic"
+        },
+        {
+            ime_recepta: "Cheesecake",
+            vrsta_jela: "dezert",
+            recept: "Koraci recepta",
+            tezina: 3,
+            vreme: "15-30min",
+            mediji: ["assets/images/dezerti/cheesecake1.jpg"],
+            korisnik: "anamilicevic"
+        },
+        {
+            ime_recepta: "Brownie",
+            vrsta_jela: "dezert",
+            recept: "Koraci recepta",
+            tezina: 2,
+            vreme: "15-30min",
+            mediji: ["assets/images/dezerti/brownie1.jpg", "assets/images/dezerti/brownie2.jpg"],
+            korisnik: "nikolakrstic"
+        },
+    ];
+
+    let oceneHC = [
+        {
+            "kor_ime": "anamilicevic",
+            "ocena": 3,
+            "recept": "Biftek"
+        },
+        {
+            "kor_ime": "nikolakrstic",
+            "ocena": 4,
+            "recept": "Biftek"
+        },
+        {
+            "kor_ime": "petarpetrovic",
+            "ocena": 4,
+            "recept": "Biftek"
+        },
+        {
+            "kor_ime": "nikolakrstic",
+            "ocena": 2,
+            "recept": "Sushi"
+        },
+        {
+            "kor_ime": "anamilicevic",
+            "ocena": 1,
+            "recept": "Sushi"
+        },
+        {
+            "kor_ime": "andrejjokic",
+            "ocena": 4,
+            "recept": "Burger"
+        },
+        {
+            "kor_ime": "anamilicevic",
+            "ocena": 2,
+            "recept": "Burger"
+        },
+        {
+            "kor_ime": "petarpetrovic",
+            "ocena": 3,
+            "recept": "Burger"
+        },
+        {
+            "kor_ime": "nikolakrstic",
+            "ocena": 2,
+            "recept": "Batak"
+        },
+        {
+            "kor_ime": "andrejjokic",
+            "ocena": 4,
+            "recept": "Pasulj"
+        },
+        {
+            "kor_ime": "nikolakrstic",
+            "ocena": 3,
+            "recept": "Pasulj"
+        },
+        {
+            "kor_ime": "andrejjokic",
+            "ocena": 5,
+            "recept": "Pica"
+        },
+        {
+            "kor_ime": "anamilicevic",
+            "ocena": 5,
+            "recept": "Pica"
+        },
+        {
+            "kor_ime": "petarpetrovic",
+            "ocena": 5,
+            "recept": "Pica"
+        },
+        {
+            "kor_ime": "andrejjokic",
+            "ocena": 4,
+            "recept": "Supa"
+        },
+        {
+            "kor_ime": "andrejjokic",
+            "ocena": 4,
+            "recept": "Gibanica"
+        },
+        {
+            "kor_ime": "nikolakrstic",
+            "ocena": 3,
+            "recept": "Gibanica"
+        },
+        {
+            "kor_ime": "anamilicevic",
+            "ocena": 4,
+            "recept": "Gibanica"
+        },
+        {
+            "kor_ime": "andrejjokic",
+            "ocena": 5,
+            "recept": "Salata"
+        },
+        {
+            "kor_ime": "nikolakrstic",
+            "ocena": 5,
+            "recept": "Smoothie"
+        },
+        {
+            "kor_ime": "anamilicevic",
+            "ocena": 4,
+            "recept": "Smoothie"
+        },
+        {
+            "kor_ime": "anamilicevic",
+            "ocena": 5,
+            "recept": "Palacinke"
+        },
+        {
+            "kor_ime": "nikolakrstic",
+            "ocena": 5,
+            "recept": "Palacinke"
+        },
+        {
+            "kor_ime": "andrejjokic",
+            "ocena": 2,
+            "recept": "Brownie"
+        }
+    ];
+
     let komentariHC = [
         {
             "kor_ime": "andrejjokic",
@@ -76,29 +369,43 @@ function popuniKomentare() {
             "recept": "Brownie"
         },
     ];
-    
-    localStorage.setItem("komentari", JSON.stringify(komentariHC));
 
-    // Krece pravi kod
-    let komentari = JSON.parse(localStorage.getItem("komentari"));
-    
-    // Popuni prvog
-    $("#komentar-ime-1").html(komentari[0].kor_ime);
-    $("#komentar-recept-1").html(komentari[0].recept);
-    $("#komentar-tekst-1").html(komentari[0].komentar);
+    let korisniciHC = [
+        {
+            kor_ime: "andrejjokic",
+            slika: "assets/images/customer1.png"
+        },
+        {
+            kor_ime: "nikolakrstic",
+            slika: "assets/images/customer2.png"
+        },
+        {
+            kor_ime: "nikolakrstic99",
+            slika: "assets/images/blog-details/c2.jpg"
+        },
+    ];
 
-    // Popuni drugog
-    $("#komentar-ime-2").html(komentari[1].kor_ime);
-    $("#komentar-recept-2").html(komentari[1].recept);
-    $("#komentar-tekst-2").html(komentari[1].komentar);
+    if (localStorage.getItem("recepti") == null) {
+        localStorage.setItem("recepti", JSON.stringify(receptiHC));
+    }
 
-    // Popuni prvog
-    $("#komentar-ime-3").html(komentari[2].kor_ime);
-    $("#komentar-recept-3").html(komentari[2].recept);
-    $("#komentar-tekst-3").html(komentari[2].komentar);
+    if (localStorage.getItem("ocene") == null) {
+        localStorage.setItem("ocene", JSON.stringify(oceneHC));
+    }
 
-    // Popuni prvog
-    $("#komentar-ime-4").html(komentari[3].kor_ime);
-    $("#komentar-recept-4").html(komentari[3].recept);
-    $("#komentar-tekst-4").html(komentari[3].komentar);
+    if (localStorage.getItem("komentari") == null) {
+        localStorage.setItem("komentari", JSON.stringify(komentariHC));
+    }
+
+    if (localStorage.getItem("korisnici") == null) {
+        localStorage.setItem("korisnici", JSON.stringify(korisniciHC));
+    }
+
+    if (localStorage.getItem("korisnik") == null) {
+        localStorage.setItem("korisnik", JSON.stringify({kor_ime: "nikolakrstic99", slika: "assets/images/blog-details/c2.jpg"}));
+    }
+
+    if (localStorage.getItem("jezik") == null) {
+        localStorage.setItem("jezik", "srpski");
+    }
 }

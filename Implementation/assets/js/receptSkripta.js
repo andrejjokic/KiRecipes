@@ -1,24 +1,5 @@
 $(document).ready(function(){
 
-   
-    
-    // recept={
-    //         ime_recepta:"Burger",
-    //         vrsta_jela:"Dezert",
-    //         recept:"Moje omiljeno jelo",
-    //         tezina:1,
-    //         vreme:"0-15min",
-    //         mediji:["assets/images/food1.jpg","assets/images/food2.jpg","assets/images/food3.jpg"],
-    //         korisnik:"nikolakrstic99"
-    // };
-    //localStorage.setItem("recept",JSON.stringify(recept));
-    
-    let korisnik={
-        kor_ime:"nikolakrstic99",
-        slika:"assets/images/blog-details/c2.jpg"
-    };
-    localStorage.setItem("korisnik",JSON.stringify(korisnik));
-
     var recept = JSON.parse(localStorage.getItem("recept"));
     var nizOcena=[],oceneRecepta=[];
     nizOcena=JSON.parse(localStorage.getItem("ocene"));
@@ -34,7 +15,7 @@ $(document).ready(function(){
     $("#ocena").text((sum/cnt).toFixed(2));
 
     komentari=[];
-    if(localStorage.getItem("komentari")!=null){
+    if(localStorage.getItem("komentari") != null){
         komentari=JSON.parse(localStorage.getItem("komentari"));
         komentari=komentari.filter(com=>com.recept==recept.ime_recepta);
         $("#brojKomentara").text(komentari.length+" komentara");
