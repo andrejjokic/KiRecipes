@@ -9,15 +9,23 @@ $(document).ready(function(){
     if(localStorage.getItem("komentari")!=null){
         komentari=JSON.parse(localStorage.getItem("komentari"));
         komentari=komentari.filter(com=>com.kor_ime==korisnik.kor_ime);
-        $("#brojKomentara").text(komentari.length+" komentara");
+        if(jezik=="srpski")
+            $("#brojKomentara").text(komentari.length+" komentara");
+        else
+            $("#brojKomentara").text(komentari.length+" comments");
         for(let i=0;i<komentari.length;i++){
             let komentList=$("<div class='comment-list'></div>");
             let komentar=$("<div class='user justify-content-between d-flex'></div>");
             let slikaKorisnika=$("<div class='tumb'></div>").append($("<img>").attr("src",korisnik.slika));
             let tekst=$("<div class='desc'><br></div>");
             let ime=$("<h5></h5>").text(komentari[i].kor_ime);
-            let recept=$("<i></i>").text("Komentar na recept: " + komentari[i].recept);
-            let kom=$("<p class='comment'></p>").text(komentari[i].komentar);
+            let recept;
+            if(jezik=="srpski")
+                recept=$("<i></i>").text("Komentar na recept: " + komentari[i].recept);
+            else
+            recept=$("<i></i>").text("Comment on recipe: " + komentari[i].recept);
+
+               let kom=$("<p class='comment'></p>").text(komentari[i].komentar);
             slikaKorisnika.append(ime).append(recept).append(kom);
             komentar.append(slikaKorisnika);
             komentList.append(komentar);

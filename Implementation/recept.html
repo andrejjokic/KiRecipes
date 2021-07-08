@@ -66,12 +66,12 @@
                             <li><a href="o_nama.html">o nama</a></li>
                            
                             <li>
-                                <a class="link-grupe">
+                                <a class="link-grupe" href="recept.html">
                                     <img class="srp" src="assets/images/serbia.png" width="50px">
                                 </a>
                             </li>
                             <li>
-                                <a class="link-grupe">
+                                <a class="link-grupe" href="recept.html">
                                     <img class="eng" src="assets/images/britan.png" width="50px">
                                 </a>
                             </li> 
@@ -96,12 +96,12 @@
                             <li><a href="o_nama.html">About us</a></li>
                             
                             <li>
-                                <a class="link-grupe">
+                                <a class="link-grupe" href="recept.html">
                                     <img class="srp" src="assets/images/serbia.png" width="50px">
                                 </a>
                             </li>
                             <li>
-                                <a class="link-grupe">
+                                <a class="link-grupe" href="recept.html">
                                     <img class="eng" src="assets/images/britan.png" width="50px">
                                 </a>
                             </li>
@@ -118,8 +118,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="naslov"><i>Recept</i></h1>
-                    <span>Recepti</span>
+                    <h1 class="naslov srpski"><i>Recept</i></h1>
+                    <h1 class="naslov engleski"><i>Recipe</i></h1>
+                    <span class="srpski">Recepti</span>
+                    <span class="engleski">Recepies</span>
                     <span class="mx-2">/</span>
                     <span id="vrsta_jela"></span>
                     <span class="mx-2">/</span>
@@ -133,7 +135,7 @@
 
     <!-- Recipes Area Starts -->
     <section class="food-area section-padding">
-        <div class="container srpski">
+        <div class="container">
             <div class="row">
                 
                 <div class="col-sm-12">
@@ -143,6 +145,7 @@
                 </div>
             </div>
 
+            
             <div class="row">
                 <div class="single-post row">
                     <div class="col-sm-3">
@@ -192,13 +195,16 @@
                     </div>
 
                     <div class="col-sm-6">
-                        <label for="">Izaberite sliku</label><br>
-                        <input type="file" id="slika" title="Search for a file to add 2" class="genric-btn disable circle">
+                        <label class="srpski">Izaberite sliku</label><br>
+                        <label class="engleski">Choose image</label><br>
+                        <input type="file" id="slika1" title="Search for a file to add 2" class="genric-btn disable circle srpski">
+                        <input type="file" id="slika2" title="Search for a file to add 2" class="genric-btn disable circle engleski">
 
-                        <button id="dodajSlikuDugme" class="genric-btn primary circle">Dodajte vašu sliku</button>
+                        <button id="dodajSlikuDugme1" class="genric-btn primary circle srpski">Dodajte vašu sliku</button>
+                        <button id="dodajSlikuDugme2" class="genric-btn primary circle engleski">Add your image</button>
                     </div>
                     <div class="col-sm-12">
-                        <h5>Video pripreme</h5>
+                        <h5>Video</h5>
                     </div>
 
                     <div class="col-sm-12" id="videoDiv">
@@ -208,21 +214,26 @@
 
             <div class="row">
                 <div class="comments-area col-sm-12" id="komentari">
-                    <h4 id="brojKomentara">05 Comments</h4>	                                             				
+                    <h4 id="brojKomentara1"></h4>
+                    <h4 id="brojKomentara2"></h4>	 	                                             				
                 </div>
                 <div class="comment-form  col-sm-12">
-                    <h4>Komentariši</h4>
+                    <h4 class="srpski">Komentariši</h4>
+                    <h4 class="engleski">Comment</h4>
                     <form name="formaKomentar">
                         <div class="form-group">
-                            <textarea class="form-control mb-10" rows="5" name="komentar" placeholder="Komentar" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Komentar'" required=""></textarea>
+                            <textarea class="form-control mb-10 srpski" rows="5" name="komentar1" placeholder="Komentar" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Komentar'" required=""></textarea>
+                            <textarea class="form-control mb-10 engleski" rows="5" name="komentar2" placeholder="Comment" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Comment'" required=""></textarea>
                         </div>
                     </form>
-                    <button id="dugmeKomentar" class="template-btn">Komentariši</button>
+                    <button id="dugmeKomentar1" class="template-btn srpski">Komentariši</button>
+                    <button id="dugmeKomentar2" class="template-btn engleski">Comment</button>
                 </div> 
             </div>
-            <button id="skiniPDF" class="genric-btn primary circle">Skini PDF</button>
+            <button id="skiniPDF1" class="genric-btn primary circle srpski">Skini PDF</button>
+            <button id="skiniPDF2" class="genric-btn primary circle engleski">Download PDF</button>
         </div>
-
+        <!---
         <div class="container engleski">
             <div class="row">
                 
@@ -258,7 +269,7 @@
                     <div class="col-sm-6">
                         <section class='rating-widget'>
                             <br>
-                            <!-- Rating Stars Box -->
+                            
                             <div class='rating-stars text-center'>
                             <ul id='stars'>
                                 <li class='star' title='Poor' data-value='1'>
@@ -312,6 +323,7 @@
             </div>
             <button id="skiniPDF" class="genric-btn primary circle">Download PDF</button>
         </div>
+        --->
     </section>
     <!-- Recipes Area End -->
 

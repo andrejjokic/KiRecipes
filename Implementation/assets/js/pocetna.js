@@ -93,7 +93,7 @@ function hardcode() {
         {
             ime_recepta: "Biftek",
             vrsta_jela: "glavno_jelo",
-            recept: "Koraci recepta",
+            recept: "Pripremna radnja je mariniranje. Za razliku od ramsteka koji zahteva drugačiji tretman – biftek može da se marinira od par sati do 2 dana. Potopite ga u miks bibera, začina za “steak”, dodajte mleveni ili celi lovorov list. Nalijte maslinovo ulje. I nikako ne stavljajte so u ovoj fazi. Biftek sa slike sam marinirala oko 2 sata na sobnoj temperaturi – u zelenom biberu, maslinovom ulju i Spice-Up Shop miksu začina za “steak”. Kad pogledate sastav miksa, biće vam jasno da sam razvila preteranu nakonost prema zelenom biberu",
             tezina: 5,
             vreme: "1h+",
             mediji: ["assets/images/glavna_jela/biftek1.jpg", "assets/images/glavna_jela/biftek2.jpg", "assets/images/glavna_jela/biftek3.jpg"],
@@ -103,7 +103,7 @@ function hardcode() {
         {
             ime_recepta: "Sushi",
             vrsta_jela: "glavno_jelo",
-            recept: "Koraci recepta",
+            recept: "Prvo treba skuvati pirinač.Operite ga iz nekoliko voda.Prelijte ga vodom i ostavite da malo odstoji, oko pola sata.Prelijte ga sa 1,5 šoljom vode i kuvajte na nižoj temperaturi dok se voda ne upije (15-ak minuta).Pirinač držite u poklopljenoj šerpici dok se ne ohladi.Mešajte na ringli dok se svi sastojci ne sjedine tj. dok se so i šećer ne otope.Smesa treba kratko da vri.Kada se prohladi, izmešajte sa pirinčem. Sada sledi uvijanje rolnica. Potreban vam je podmetač za sto od bambusa ili nešto slično.Na podmetač za sto stavite nori algu, rasporedite pirinač (1/2 količine ili 1/3).Ruke navlažite vodom kako biste lakše rasporedili pirinač.Na kraj stavite punjenje i uvijte rolnicu uz pomoć podmetača.To je to.Isecite rolnicu i poslužite uz soja sos ljuti sos, wasabi…",
             tezina: 5,
             vreme: "30-60min",
             mediji: ["assets/images/glavna_jela/sushi1.png", "assets/images/glavna_jela/sushi2.jpg"],
@@ -113,7 +113,7 @@ function hardcode() {
         {
             ime_recepta: "Burger",
             vrsta_jela: "glavno_jelo",
-            recept: "Koraci recepta",
+            recept: "O burgerima i načinu njihovog spremanja ispredaju se čitave legende. Ne postoji osoba koja sprema domaće burgere, a da ne tvrdi da su njeni „najbolji“, „najukusniji“, „najsočniji“. Kao i kod mnogih jela, i kod ovog bi trebalo povesti računa o kvalitetu sastojaka, a prvenstveno mesa. Mnogi tvrde da se ze burgere mora odabrati parče junećeg mesa, bez masti, koje se seče između vrata i plećke. Varijacije recepta za domaći burger sadrže i određeni procenat (20 – 30%) ćurećeg ili nekog drugog mesa.Ako koristite tiganj za spremanje domaćih burgera – onda, koristite, po mogućstvu, tiganj od livenog gvožđa. Zagrejte malo ulja u tiganju na jakoj vatri – sve dok ulje ne počne da pucketa. Stavite burgere u tiganj i pecite oko 3 minuta prvu stranu. Pažljivo okrenite i pecite oko 4 minuta drugu stranu, za srednje pečeno (za dobro pečeno – oko 5 minuta).",
             tezina: 3,
             vreme: "15-30min",
             mediji: ["assets/images/glavna_jela/burger1.jpg", "assets/images/glavna_jela/burger2.jpg"],
@@ -123,7 +123,7 @@ function hardcode() {
         {
             ime_recepta: "Batak",
             vrsta_jela: "glavno_jelo",
-            recept: "Koraci recepta",
+            recept: "Dugo vremena nisam želela da kupim batat, odnosno slatki krompir, jer sam mislila da je preskup. Dva krompira koštala bi oko 300 dinara?! Ima i drugih zdravih namirnica, nije nužno. Medjutim, svaki put kada bih prolazila pored njega u prodavnici, nešto mi je zadržavalo pogled na njemu. Nakon dugog vaganja i razmišljanja, reših da kupim i probam, prežaliću pare ako mi se ukus ne dopadne. Da, bila sam skeptična. Kako krompir da bude sladak? To je zapravo i bio glavni razlog odlaganja. I, pogodićete, ono što se kasnije desilo je happy end. Zaljubila sam se u batat. Doslovno.Od samog jednog slatkog krompira, neke srednje veličine, ja sam pripremila pomfrit za nas dvoje. Ispržila 2-3 jajeta, i mi smo se taaako dobro najeli. Ukus je bio fantazija, a s obzirom da je veoma intenzivan, kao takav pruža odličan osećaj sitosti.",
             tezina: 2,
             vreme: "15-30min",
             mediji: ["assets/images/glavna_jela/batak1.png", "assets/images/glavna_jela/batak2.jpg"],
@@ -133,7 +133,7 @@ function hardcode() {
         {
             ime_recepta: "Medaljoni",
             vrsta_jela: "glavno_jelo",
-            recept: "Koraci recepta",
+            recept: "File se sece poprecno u odnosu na misicna vlakna na komade od oko 5 cm duzine (3 takva komada imaju oko 200 g). Meso treba izlupati sa obe presecene strane tako da se dobiju komadi visine oko 3 cm i precnika oko 7-8 cm. Ako je po zelji da medaljoni zadrze pravilan okrugli oblik tokom przenja, mogu se obuhvatiti trakama masnog papira koji se zalepi belancetom. Neposredno pre przenja se medaljoni obrasnjavaju sa jedne strane. Obrasnjena strana se prva stavlja na tanak sloj zagrejanog ulja da se przi. Kada je strana koja se przi zlatno-zuta, a na gornjoj neprzenoj strani se pojave kaplice mesnog soka, medaljone treba okrenuti i produziti przenje. Przenje je gotovo kada i druga strana postane zlatno-zuta. U tom trenutku se dodaje maslac (1 kasicica po osobi), saceka da se istopi i laganim trzajima tiganja razlije po medaljonima. Medaljoni se tek na kraju przenja posole po ukusu.",
             tezina: 4,
             vreme: "30-60min",
             mediji: ["assets/images/glavna_jela/medaljoni1.jpg", "assets/images/glavna_jela/medaljoni2.jpg"],
@@ -143,7 +143,7 @@ function hardcode() {
         {
             ime_recepta: "Pasulj",
             vrsta_jela: "glavno_jelo",
-            recept: "Koraci recepta",
+            recept: "Pasulj potopiti da stoji u vodi par sati da nabubri. Procediti ga i naliti vodom, pa staviti da se kuva. Kad se napola skuva, ponovo ga ocediti od vode i ostaviti sa strane.Suva rebra takođe oprati i staviti da se otkuvaju (ukoliko su jače dimljena otkuvati dva puta), pa pred kraj u tu vodu potopiti slaninu i kobasicu da otpuste suvisnu masnoću.U sud u kom kuvate pasulj sipati malo ulja i na njega staviti seckani crni i beli luk, dinstati dok ne omekša, pa polako dodavati zelen, šargarepu i papriku, da sve omekša. Dodati malo suvog zacina, soli i bibera i lovorov list. Sad dodati slaninu, rebra i kobasicu, te naliti vrućom vodom da ogrezne. Ostaviti da se lagano kuva 40 min, poklopljeno.Zatim dodati i pasulj da se dokuva. Popraviti ukus sa nabrojanim  začinima i persunom  po potrebi. U tiganj staviti malo ulja i dodati brasno da se uprži (količinom brašna se određuje gustina čorbe). Kad porumeni dodati crvenu mlevenu papriku i takvu zapršku dodati u lonac. Pustiti još malo da se krčka i isključiti šporet.",
             tezina: 4,
             vreme: "1h+",
             mediji: ["assets/images/glavna_jela/pasulj1.jpg", "assets/images/glavna_jela/pasulj2.jpg", "assets/images/glavna_jela/pasulj3.jpg"],

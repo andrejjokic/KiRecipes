@@ -1,15 +1,31 @@
 $(document).ready(function(){
+    var ime_recepta,vrsta_jela,recept,tezina,vreme,slika,video;
     
-    $("#dodajReceptDugme").click(function(){
+    $("#dodajReceptDugme1").click(function(){
         
-        let ime_recepta=document.getElementById("ime_recepta").value;
-        let vrsta_jela=document.getElementById("vrsta_jela").value;
-        let recept=document.getElementById("recept").value;
-        let tezina=document.getElementById("tezina").value;
-        let vreme=document.getElementById("vreme").value;
-        let slika=document.getElementById("slika").files[0].name;
-        let video=document.getElementById("video").files[0].name;
+        ime_recepta=document.getElementById("ime_recepta1").value;
+        vrsta_jela=document.getElementById("vrsta_jela1").value;
+        recept=document.getElementById("recept1").value;
+        tezina=document.getElementById("tezina1").value;
+        vreme=document.getElementById("vreme1").value;
+        slika=document.getElementById("slika1").files[0].name;
+        video=document.getElementById("video1").files[0].name;
+        popuni();        
+    });
 
+    $("#dodajReceptDugme2").click(function(){
+        
+        ime_recepta=document.getElementById("ime_recepta2").value;
+        vrsta_jela=document.getElementById("vrsta_jela2").value;
+        recept=document.getElementById("recept2").value;
+        tezina=document.getElementById("tezina2").value;
+        vreme=document.getElementById("vreme2").value;
+        slika=document.getElementById("slika2").files[0].name;
+        video=document.getElementById("video2").files[0].name;
+        popuni();        
+    });
+
+    function popuni(){
         let recepti=[];
         let mediji=[];
         mediji.push("assets/images/"+slika);
@@ -31,5 +47,5 @@ $(document).ready(function(){
         );
         localStorage.setItem("recepti",JSON.stringify(recepti));
         window.location.href="";
-    });
+    }
 });
