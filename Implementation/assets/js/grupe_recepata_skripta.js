@@ -84,8 +84,11 @@ function izracunajProsek(niz) {
 function dodajRecept(recept, broj) {
     let ocene = JSON.parse(localStorage.getItem("ocene"));
     let prosecnaOcena = izracunajProsek(ocene.filter(ocena => ocena.recept == recept.ime_recepta));
-    prosecnaOcena = prosecnaOcena > 0 ? prosecnaOcena.toFixed(1) + "/5.0" : "Unrated";
-
+    let jezik=localStorage.getItem("jezik");
+    if(jezik=="engleski")
+        prosecnaOcena = prosecnaOcena > 0 ? prosecnaOcena.toFixed(1) + "/5.0" : "No rates";
+    else
+    prosecnaOcena = prosecnaOcena > 0 ? prosecnaOcena.toFixed(1) + "/5.0" : "Neocenjena";
     $("#recepti").append(
         $("<div></div>").addClass("col-md-4").addClass("col-sm-6").addClass("recept-" + Math.ceil(broj / 6)).append(
             $("<div></div>").addClass("single-food").addClass("mt-5").addClass("mt-sm-0").append(

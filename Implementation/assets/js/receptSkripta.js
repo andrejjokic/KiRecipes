@@ -11,11 +11,19 @@ $(document).ready(function(){
             sum+=nizOcena[i].ocena;
         }
     }
-    if(cnt==0)
-    $("#ocena").text("Ne ocenjena");
-    else
-    $("#ocena").text((sum/cnt).toFixed(2));
-
+    let jezik=localStorage.getItem("jezik");
+    if(jezik=="srpski"){
+      if(cnt==0)
+        $("#ocena").text("Ne ocenjena");
+      else
+        $("#ocena").text((sum/cnt).toFixed(2));
+    }else{
+      if(cnt==0)
+        $("#ocena").text("No rates");
+      else
+        $("#ocena").text((sum/cnt).toFixed(2));
+    }
+    
     komentari=[];
     let koriscnici=[];
     if(localStorage.getItem("korisnici")!=null){
@@ -24,8 +32,10 @@ $(document).ready(function(){
     if(localStorage.getItem("komentari") != null){
         komentari=JSON.parse(localStorage.getItem("komentari"));
         komentari=komentari.filter(com=>com.recept==recept.ime_recepta);
-        $("#brojKomentara").text(komentari.length+" komentara");
-        
+        if(jezik=="srpski")
+          $("#brojKomentara1").text(komentari.length+" komentara");
+        else
+          $("#brojKomentara2").text(komentari.length+" comments");
         for(let i=0;i<komentari.length;i++){
             let pomKor=komentari[i].kor_ime;
             var trenKorisnik=koriscnici.filter(tmp => tmp.kor_ime == pomKor)[0];
@@ -43,7 +53,10 @@ $(document).ready(function(){
             $("#komentari").append(komentList);
         }
     }else{
-        $("#brojKomentara").text("Nema komentara");
+      if(jezik=="srpski")
+        $("#brojKomentara1").text("Nema komentara");
+      else
+        $("#brojKomentara2").text("No comments");
     }
     $("#vrsta_jela").text(recept.vrsta_jela);
     $("#imeRecepta").text(recept.ime_recepta);
@@ -79,8 +92,8 @@ $(document).ready(function(){
       
     }
 
-    $("#dugmeKomentar").click(function(){
-        let text_komentara=document.formaKomentar.komentar.value;
+    $("#dugmeKomentar1").click(function(){
+        let text_komentara=document.formaKomentar.komentar1.value;
         let korisnik=JSON.parse(localStorage.getItem("korisnik"));
         let komentar={
             kor_ime:korisnik.kor_ime,
@@ -99,8 +112,28 @@ $(document).ready(function(){
         window.location.href="";
     });
 
-    $("#dodajSlikuDugme").click(function(){
-        let slika=document.getElementById("slika").files[0].name;
+    $("#dugmeKomentar2").click(function(){
+      let text_komentara=document.formaKomentar.komentar2.value;
+      let korisnik=JSON.parse(localStorage.getItem("korisnik"));
+      let komentar={
+          kor_ime:korisnik.kor_ime,
+          komentar:text_komentara,
+          recept:recept.ime_recepta
+      };
+      komentari=[];
+      if(localStorage.getItem("komentari")==null){
+          komentari.push(komentar);
+          localStorage.setItem("komentari",JSON.stringify(komentari));
+      }else{
+          komentari=JSON.parse(localStorage.getItem("komentari"));
+          komentari.push(komentar);
+          localStorage.setItem("komentari",JSON.stringify(komentari));
+      }
+      window.location.href="";
+  });
+
+    $("#dodajSlikuDugme1").click(function(){
+        let slika=document.getElementById("slika1").files[0].name;
         recept.mediji.push("assets/images/"+slika);
         localStorage.setItem("recept",JSON.stringify(recept));
         var recepti=[];
@@ -115,6 +148,23 @@ $(document).ready(function(){
         localStorage.setItem("recepti",JSON.stringify(recepti));
         window.location.href="";
     });
+
+    $("#dodajSlikuDugme2").click(function(){
+      let slika=document.getElementById("slika2").files[0].name;
+      recept.mediji.push("assets/images/"+slika);
+      localStorage.setItem("recept",JSON.stringify(recept));
+      var recepti=[];
+      recepti=JSON.parse(localStorage.getItem("recepti"));
+      var i;
+      for(i=0;i<recepti.length;i++){
+          if(recepti[i].ime_recepta==recept.ime_recepta){
+              recepti[i].mediji.push("assets/images/"+slika);
+          }
+      }
+      
+      localStorage.setItem("recepti",JSON.stringify(recepti));
+      window.location.href="";
+  });
 
      /* 1. Visualizing things on Hover - See next part for action on click */
   $('#stars li').on('mouseover', function(){
@@ -174,7 +224,21 @@ $(document).ready(function(){
     window.location.href="";
   });
 
-  $("#skiniPDF").on("click",function(){
+  $("#skiniPDF1").on("click",function(){
+    var doc = new jsPDF();
+    let recept=JSON.parse(localStorage.getItem("recept"));
+    let txt=recept.ime_recepta+"\n";
+    txt+="Autor recepta je: " + recept.korisnik;
+    txt+="\nTezina recepta od 1-5 je: " + recept.tezina;
+    txt+="\nVreme pripreme recepta je: " + recept.vreme;
+    txt+="\nVrsta jela je: " + recept.vrsta_jela;
+    txt+="\nDirections: \n";
+    txt+=recept.recept;
+    doc.text(10, 50, txt);
+    doc.save(recept.ime_recepta + '.pdf');
+  });
+
+  $("#skiniPDF2").on("click",function(){
     var doc = new jsPDF();
     let recept=JSON.parse(localStorage.getItem("recept"));
     let txt=recept.ime_recepta+"\n";

@@ -140,145 +140,150 @@
     
     <!-- Start Align Area -->
     <div class="whole-wrap">
-        <div class="container">
-            
-            <div class="section-top-border">
-                <div class="row srpski">
-                    
-                    <div class="col-lg-8 col-md-8">
-                        <form>
-                        <h3 class="mb-30 title_color">Dodaj recept</h3>
-                        
-
-                            <div class="mt-10">
-                                <input type="text" id="ime_recepta" placeholder="Ime recepta" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ime recepta'" required class="single-input" required>
-                            </div>
-                            
-                            <div class="input-group-icon mt-10">
-                                <div class="icon"><i class="fa fa-cutlery" aria-hidden="true"></i></div>
-                                <div class="form-select" id="default-select">
-                                    <select id="vrsta_jela">
-                                        <option value="" disabled selected>Vrsta jela</option>
-                                        <option value="glavno_jelo">Glavno jelo</option>
-                                        <option value="dezert">Dezert</option>
-                                        <option value="predjelo">Predjelo</option>
-                                        <option value="uzina">Užina</option>
-                                    </select>
-                                </div>
-                            </div>
-                            
+        <section class="food-area section-padding">
+            <div class="container">
+                <div class="section-top-border">
+                    <div class="row srpski">
+                        <div class="col-lg-8 col-md-8">
+                            <form>
+                            <h3 class="mb-30 title_color">Dodaj recept</h3>
                             
 
-                            <div class="mt-10">
-                                <div class="icon"><i class="fas fa-pencil-alt" aria-hidden="true"></i></div>
-                                <textarea class="single-textarea" id="recept" placeholder="Recept" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Recept'" required></textarea>
-                            </div>
-                            <div class="input-group-icon mt-10" style="width: 150px;">
-                                <div class="icon"><i class="fa  fa-cogs
-                                    " aria-hidden="true"></i></div>
-                                <div class="form-select" id="default-select">
-                                    <select id="tezina">
-                                        <option value="" disabled selected>Težina</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                    </select>
+                                <div class="mt-10">
+                                    <input type="text" id="ime_recepta1" placeholder="Ime recepta" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ime recepta'" required class="single-input" required>
                                 </div>
-                            </div>
+                                
+                                <div class="input-group-icon mt-10">
+                                    <div class="icon"><i class="fa fa-cutlery" aria-hidden="true"></i></div>
+                                    <div class="form-select" id="default-select">
+                                        <select id="vrsta_jela1">
+                                            <option value="" disabled selected>Vrsta jela</option>
+                                            <option value="glavno_jelo">Glavno jelo</option>
+                                            <option value="dezert">Dezert</option>
+                                            <option value="predjelo">Predjelo</option>
+                                            <option value="uzina">Užina</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                
 
-                            
-                            <div class="input-group-icon mt-10" style="width: 150px;">
-                                <div class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
-                                <div class="form-select" id="default-select"required>
-                                    <select id="vreme" >
-                                        <option value="" disabled selected>Vreme</option>
-                                        <option value="0-15min">0-15min</option>
-                                        <option value="15-30min">15-30min</option>
-                                        <option value="30-60min">30-60min</option>
-                                        <option value="1h+">1h+</option>
-                                    </select>
+                                <div class="mt-10">
+                                    <div class="icon"><i class="fas fa-pencil-alt" aria-hidden="true"></i></div>
+                                    <textarea class="single-textarea" id="recept1" placeholder="Recept" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Recept'" required></textarea>
                                 </div>
-                            </div>
-                            <br>
-                            <label for="">Izaberite sliku jela</label><br>
-                            <input type="file" id="slika" title="Search for a file to add 2" class="genric-btn disable circle" required>
-                            <br><br>
-                            <label for="">Izaberite video pripreme jela</label><br>
-                            <input type="file" id="video" required title="Search for a file to add 2" class="genric-btn disable circle" required>
-                            <button id="dodajReceptDugme" class="genric-btn primary circle">Dodaj recept</button>
-                        </form>
+                                <div class="input-group-icon mt-10" style="width: 150px;">
+                                    <div class="icon"><i class="fa  fa-cogs
+                                        " aria-hidden="true"></i></div>
+                                    <div class="form-select" id="default-select">
+                                        <select id="tezina1">
+                                            <option value="" disabled selected>Težina</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="input-group-icon mt-10" style="width: 150px;">
+                                    <div class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                                    <div class="form-select" id="default-select"required>
+                                        <select id="vreme1" >
+                                            <option value="" disabled selected>Vreme</option>
+                                            <option value="0-15min">0-15min</option>
+                                            <option value="15-30min">15-30min</option>
+                                            <option value="30-60min">30-60min</option>
+                                            <option value="1h+">1h+</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <label for="">Izaberite sliku jela</label><br>
+                                <input type="file" id="slika1" title="Search for a file to add 2" class="genric-btn disable circle" required>
+                                <br><br>
+
+                                <label for="">Izaberite video pripreme jela</label><br>
+                                <input type="file" id="video1" required title="Search for a file to add 2" class="genric-btn disable circle" required>
+                                <button id="dodajReceptDugme1" class="genric-btn primary circle">Dodaj recept</button>
+                            </form>
+                        </div>
                     </div>
-                </div>
 
-                <div class="row engleski">
-                    <div class="col-lg-8 col-md-8">
-                        <h3 class="mb-30 title_color">Add recipe</h3>
+                    <div class="row engleski">
+                        <div class="col-lg-8 col-md-8">
+                            <form>
+                                <h3 class="mb-30 title_color">Add recipe</h3>
+                            
+
+                                <div class="mt-10">
+                                    <input type="text" id="ime_recepta2" placeholder="Name of recipe" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name of recipe'" required class="single-input" required>
+                                </div>
+                                
+                                <div class="input-group-icon mt-10">
+                                    <div class="icon"><i class="fa fa-cutlery" aria-hidden="true"></i></div>
+                                    <div class="form-select" id="default-select">
+                                        <select id="vrsta_jela2">
+                                            <option value="" disabled selected>Type of dish</option>
+                                            <option value="glavno_jelo">Main dish</option>
+                                            <option value="dezert">Desert</option>
+                                            <option value="predjelo">Appetizers</option>
+                                            <option value="uzina">Snack</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                
+
+                                <div class="mt-10">
+                                    <div class="icon"><i class="fas fa-pencil-alt" aria-hidden="true"></i></div>
+                                    <textarea class="single-textarea" id="recept2" placeholder="Recipe" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Recipe'" required></textarea>
+                                </div>
+                                <div class="input-group-icon mt-10" style="width: 150px;">
+                                    <div class="icon"><i class="fa  fa-cogs
+                                        " aria-hidden="true"></i></div>
+                                    <div class="form-select" id="default-select">
+                                        <select id="tezina2">
+                                            <option value="" disabled selected>Difficulty</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="input-group-icon mt-10" style="width: 150px;">
+                                    <div class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                                    <div class="form-select" id="default-select">
+                                        <select id="vreme2">
+                                            <option value="" disabled selected>Time</option>
+                                            <option value="0-15min">0-15min</option>
+                                            <option value="15-30min">15-30min</option>
+                                            <option value="30-60min">30-60min</option>
+                                            <option value="1h+">1h+</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <label for="">Choose image</label><br>
+                                <input type="file" id="slika2" title="Search for a file to add 2" class="genric-btn disable circle" required>
+                                <br><br>
+
+                                <label for="">Choose video</label><br>
+                                <input type="file" id="video2" title="Search for a file to add 2" class="genric-btn disable circle" required><br>
+                                <button id="dodajReceptDugme2" class="genric-btn primary circle">Add recipe</button>
+                            </form>
+                        </div>
                         
-
-                            <div class="mt-10">
-                                <input type="text" id="ime_recepta" placeholder="Name of recipe" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name of recipe'" required class="single-input">
-                            </div>
-                            
-                            <div class="input-group-icon mt-10">
-                                <div class="icon"><i class="fa fa-cutlery" aria-hidden="true"></i></div>
-                                <div class="form-select" id="default-select">
-                                    <select id="vrsta_jela">
-                                        <option value="" disabled selected>Type of dish</option>
-                                        <option value="glavno_jelo">Main dish</option>
-                                        <option value="dezert">Desert</option>
-                                        <option value="predjelo">Appetizers</option>
-                                        <option value="uzina">Snack</option>
-                                    </select>
-                                </div>
-                            </div>
-                            
-                            
-
-                            <div class="mt-10">
-                                <div class="icon"><i class="fas fa-pencil-alt" aria-hidden="true"></i></div>
-                                <textarea class="single-textarea" id="recept" placeholder="Recipe" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Recipe'" required></textarea>
-                            </div>
-                            <div class="input-group-icon mt-10" style="width: 150px;">
-                                <div class="icon"><i class="fa  fa-cogs
-                                    " aria-hidden="true"></i></div>
-                                <div class="form-select" id="default-select">
-                                    <select id="tezina">
-                                        <option value="" disabled selected>Difficulty</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            
-                            <div class="input-group-icon mt-10" style="width: 150px;">
-                                <div class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
-                                <div class="form-select" id="default-select">
-                                    <select id="vreme">
-                                        <option value="" disabled selected>Time</option>
-                                        <option value="0-15min">0-15min</option>
-                                        <option value="15-30min">15-30min</option>
-                                        <option value="30-60min">30-60min</option>
-                                        <option value="1h+">1h+</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <br>
-                            <label for="">Choose image</label><br>
-                            <input type="file" id="slika" title="Search for a file to add 2" class="genric-btn disable circle">
-                            <br><br>
-
-                            <button id="dodajReceptDugme" class="genric-btn primary circle">Add recipe</button>
                     </div>
-                    
                 </div>
             </div>
-        </div>
+        </section>
     </div>
     <!-- End Align Area -->
 
